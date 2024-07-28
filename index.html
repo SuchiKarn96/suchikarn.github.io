@@ -129,19 +129,19 @@
 
           <li class="social-item">
             <a href="//www.facebook.com" class="social-link" target="_blank">
-              <ion-icon name="logo-facebook"></ion-icon>
+              <ion-icon name="logo-linkedin"></ion-icon>
             </a>
           </li>
 
           <li class="social-item">
             <a href="//www.twitter.com" class="social-link" target="_blank">
-              <ion-icon name="logo-twitter"></ion-icon>
+              <ion-icon name="mail-outline"></ion-icon>
             </a>
           </li>
 
           <li class="social-item">
             <a href="//www.instagram.com" class="social-link" target="_blank">
-              <ion-icon name="logo-instagram"></ion-icon>
+              <ion-icon name="arrow-down-outline"></ion-icon>
             </a>
           </li>
 
@@ -1003,15 +1003,18 @@
 
           <h3 class="h3 form-title">Contact Form</h3>
 
-          <form action="#" class="form" data-form>
+          <form action="" id="emailForm" class=" form" data-form>
 
             <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+              <input type="text" id="fullName" name="fullname" class="form-input" placeholder="Full name" required
+                data-form-input>
 
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+              <input type="email" id="emailAddress" name="email" class="form-input" placeholder="Email address" required
+                data-form-input>
             </div>
 
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+            <textarea name="message" id="emailMessage" class="form-input" placeholder="Your Message" required
+              data-form-input></textarea>
 
             <button class="form-btn" type="submit" disabled data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>
@@ -1043,7 +1046,13 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("ACCOUNT_PUBLIC_ID");
+    })();
+  </script>
 </body>
 
 </html>

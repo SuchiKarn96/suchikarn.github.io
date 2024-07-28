@@ -143,3 +143,34 @@ for (let i = 0; i < navigationLinks.length; i++) {
     }
   });
 }
+
+const emailForm = document.querySelector("[data-form]");
+
+emailForm.addEventListener("submit", e => {
+  e.preventDefault();
+  const name = document.getElementById("fullName").value;
+  const email = document.getElementById("emailAddress").value;
+  const msg = document.getElementById("emailMessage").value;
+
+  sendEmail(name, email, msg);
+});
+
+const sendEmail = (name, email, msg) => {
+  const templateParam = {
+    fullName: name,
+    emailAddress: email,
+    emailMessage: msg,
+  };
+  emailjs
+    .send("SERVICE_ID_FROM_EMAIL_JS", "TEMPLATE_ID_FROM_EMAILJS", templateParam)
+    .then(
+      response => {
+        alert("Successfully Sent the mail");
+        console.log("SUCCESS!", response.status, response.text);
+      },
+      error => {
+        alert("Something went wrong");
+        console.log("FAILED...", error);
+      }
+    );
+};
