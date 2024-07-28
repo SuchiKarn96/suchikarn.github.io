@@ -162,7 +162,7 @@ const sendEmail = (name, email, msg) => {
     emailMessage: msg,
   };
   emailjs
-    .send("SERVICE_ID_FROM_EMAIL_JS", "TEMPLATE_ID_FROM_EMAILJS", templateParam)
+    .send("service_ekjciou", "template_eitjs3i", templateParam)
     .then(
       response => {
         alert("Successfully Sent the mail");
