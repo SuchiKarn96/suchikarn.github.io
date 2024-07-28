@@ -182,6 +182,9 @@
     margin: 16px 0;
   }
   
+  .hidden {
+    display: none;
+  }
   .icon-box {
     position: relative;
     background: var(--border-gradient-onyx);
@@ -721,6 +724,10 @@
     line-height: 1.6;
   }
   
+  .modal-content span {
+    margin-bottom: 4px;
+    font-size: var(--fs-6);
+  }
   
   /**
    * #clients 
